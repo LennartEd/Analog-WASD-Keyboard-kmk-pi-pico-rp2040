@@ -30,7 +30,7 @@ class AnalogKey(Module):
         else:
             keyboard.remove_key(KC.S)
             
-        if self.pin4s.value > self.threshold:
+        if self.pin4.value > self.threshold:
             keyboard.add_key(KC.D)
         else:
             keyboard.remove_key(KC.D)

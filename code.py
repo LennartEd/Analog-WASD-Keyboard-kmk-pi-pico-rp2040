@@ -42,7 +42,7 @@ keyboard.modules.append(analog_key_module)
 _______ = KC.TRNS
 xxxxxxx = KC.NO
 
-# KEYMAPS 
+# KEYMAPS
 keyboard.keymap = [
     # MACROS
     [
