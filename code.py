@@ -10,7 +10,8 @@ from kmk.modules.layers import Layers
 from kmk.modules.encoder import EncoderHandler
 from kmk.modules.tapdance import TapDance
 from kmk.extensions.RGB import RGB
-from kmk.modules.analouge import AnalogKey 
+
+from kmk.modules.analouge import AnalogKey #handles analoginput
 
 # KEYTBOARD SETUP
 layers = Layers()
@@ -36,7 +37,8 @@ rgb_ext = RGB(pixel_pin = board.GP13, num_pixels=4, hue_default=100)
 keyboard.extensions.append(rgb_ext)
 keyboard.debug_enabled = False
 
-analog_key_module = AnalogKey(board.GP29,board.GP28,board.GP27,board.GP26, 50000)
+# ANALOG INPUT
+analog_key_module = AnalogKey(board.GP29,board.GP28,board.GP27,board.GP26, 50000) #pass 4 analog pins and threshold 
 keyboard.modules.append(analog_key_module)
 
 _______ = KC.TRNS
