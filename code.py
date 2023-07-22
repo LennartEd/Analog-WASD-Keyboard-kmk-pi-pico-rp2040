@@ -44,16 +44,18 @@ ___ = KC.TRNS
 xxx = KC.NO
 LA1 = KC.MO(1)
 
-# KEYMAPS
+# KEYMAPS 
 keyboard.keymap = [
     # MACRO
     [
-        KC.M,   KC.B,     KC.C,    KC.D,
-        KC.E,   KC.F,     LA1,    KC.H,
+        KC.M,   LA1,     KC.C,    KC.D,
+        KC.E,   KC.F,     KC.G,    KC.H,
         KC.I,   KC.J,     KC.K,    KC.L,
     ],
     [
-        KC.N1,___,KC.N2
+        KC.N1,  KC.N2,  KC.N3,  KC.N4,
+        KC.N5,  KC.N6,  KC.N7,  KC.N8,
+        KC.N9,
     ]
 ]
 
@@ -61,10 +63,10 @@ encoders.map = [    ((KC.VOLD, KC.VOLU, KC.MUTE),           (KC.RGB_VAD,    KC.R
 ]
 ana.map = [
     [
-        KC.W,KC.A 
+        KC.W,KC.A,KC.S,KC.D
     ],
     [
-        KC.S,KC.D
+        KC.N1,KC.N2,KC.N3,KC.N4
     ]
 ]
 

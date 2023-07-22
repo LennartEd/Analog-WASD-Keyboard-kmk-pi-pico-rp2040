@@ -15,27 +15,29 @@ class AnalogKey(Module):
 
     def before_matrix_scan(self, keyboard):
         layer_id = keyboard.active_layers[0]
-        #print(layer_id)
-        #print(f's',self.map[layer_id][0])
+        #print(self.pin1.value,self.pin2.value,self.pin3.value,self.pin4.value)
+        
         if self.pin1.value > self.threshold:
             keyboard.add_key(self.map[layer_id][0])
         else:
             keyboard.remove_key(self.map[layer_id][0])
-            
-        """if self.pin2.value > self.threshold:
-            keyboard.add_key(KC.A)
+        
+        if self.pin2.value > self.threshold:
+            keyboard.add_key(self.map[layer_id][1])
         else:
-            keyboard.remove_key(KC.A)
-            
+            keyboard.remove_key(self.map[layer_id][1])
+        
         if self.pin3.value > self.threshold:
-            keyboard.add_key(KC.S)
+            keyboard.add_key(self.map[layer_id][2])
         else:
-            keyboard.remove_key(KC.S)
-            
+            keyboard.remove_key(self.map[layer_id][2])
+        
         if self.pin4.value > self.threshold:
-            keyboard.add_key(KC.D)
+            keyboard.add_key(self.map[layer_id][3])
         else:
-            keyboard.remove_key(KC.D)"""
+            keyboard.remove_key(self.map[layer_id][3])
+            
+        
         
 
             
