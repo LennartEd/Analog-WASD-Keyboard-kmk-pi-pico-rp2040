@@ -13,21 +13,22 @@ from kmk.extensions.RGB import RGB
 
 from kmk.modules.analouge import AnalogKey #handles analoginput
 
-# KEYTBOARD SETUP
+
+# KEYTBOARD SETUP 
 layers = Layers()
 keyboard = KMKKeyboard()
 encoders = EncoderHandler()
-
+ana = AnalogKey()
 #tapdance = TapDance()
 #tapdance.tap_time = 250
-keyboard.modules = [layers, encoders] #tapdance]
+
+
+keyboard.modules = [layers, encoders,ana] #tapdance]
 
 # SWITCH MATRIX
 keyboard.col_pins = (board.GP3, board.GP4, board.GP5, board.GP6)
 keyboard.row_pins = (board.GP7, board.GP8, board.GP9)
 keyboard.diode_orientation = DiodeOrientation.COL2ROW
-
-
 
 # ENCODERS
 encoders.pins = ((board.GP2, board.GP1, board.GP0, False), (board.GP10, board.GP11, board.GP12, False),)
@@ -37,24 +38,34 @@ rgb_ext = RGB(pixel_pin = board.GP13, num_pixels=4, hue_default=100)
 keyboard.extensions.append(rgb_ext)
 keyboard.debug_enabled = False
 
-# ANALOG INPUT
-analog_key_module = AnalogKey(board.GP29,board.GP28,board.GP27,board.GP26, 50000) #pass 4 analog pins and threshold 
-keyboard.modules.append(analog_key_module)
 
-_______ = KC.TRNS
-xxxxxxx = KC.NO
+
+___ = KC.TRNS
+xxx = KC.NO
+LA1 = KC.MO(1)
 
 # KEYMAPS
 keyboard.keymap = [
-    # MACROS
+    # MACRO
     [
-        KC.VOLD,   KC.B,     KC.C,    KC.D,
-        KC.E,   KC.F,     KC.G,    KC.H,
+        KC.M,   KC.B,     KC.C,    KC.D,
+        KC.E,   KC.F,     LA1,    KC.H,
         KC.I,   KC.J,     KC.K,    KC.L,
+    ],
+    [
+        KC.N1,___,KC.N2
     ]
 ]
 
 encoders.map = [    ((KC.VOLD, KC.VOLU, KC.MUTE),           (KC.RGB_VAD,    KC.RGB_VAI,     KC.MUTE)),   # MACROS
+]
+ana.map = [
+    [
+        KC.W,KC.A 
+    ],
+    [
+        KC.S,KC.D
+    ]
 ]
 
 if __name__ == '__main__':
