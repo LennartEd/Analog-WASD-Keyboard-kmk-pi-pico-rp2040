@@ -38,6 +38,8 @@ rgb_ext = RGB(pixel_pin = board.GP13, num_pixels=4, hue_default=100)
 keyboard.extensions.append(rgb_ext)
 keyboard.debug_enabled = False
 
+#ANALOG 
+ana.pins = (board.GP29,board.GP28,board.GP27,board.GP26) #define analog pins
 
 
 ___ = KC.TRNS
@@ -46,7 +48,7 @@ LA1 = KC.MO(1)
 
 # KEYMAPS 
 keyboard.keymap = [
-    # MACRO
+    # MACRO 
     [
         KC.M,   LA1,     KC.C,    KC.D,
         KC.E,   KC.F,     KC.G,    KC.H,
@@ -59,8 +61,9 @@ keyboard.keymap = [
     ]
 ]
 
-encoders.map = [    ((KC.VOLD, KC.VOLU, KC.MUTE),           (KC.RGB_VAD,    KC.RGB_VAI,     KC.MUTE)),   # MACROS
+encoders.map = [    ((KC.VOLD, KC.VOLU, KC.MUTE),           (KC.RGB_VAD,    KC.RGB_VAI,     KC.MUTE)), 
 ]
+# 
 ana.map = [
     [
         KC.W,KC.A,KC.S,KC.D
