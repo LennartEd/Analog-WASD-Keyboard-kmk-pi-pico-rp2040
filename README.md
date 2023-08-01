@@ -3,8 +3,9 @@
 A Raspberry pi pico(rp2040) kmk keyboard with analog WASD input. 
 Still work in progress. 
 
-Added module: analouge.py (pins and threshold can be defined here till i implement it better)
+Added module: analouge.py (threshold can be defined here till i implement it better)
 
+pin assignment: code.py -> ana.pins =()
 keymap for analog keys can be defined it code.py -> ana.map = []
 
 GOALS:
