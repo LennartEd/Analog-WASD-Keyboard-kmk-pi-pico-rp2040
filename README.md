@@ -7,7 +7,7 @@ OVERVIEW
 ---
 This is a kmk keyboard using an RP2040 with analog WASD keys.
 
-As kmk is circuitpython based this should work on any circuitpython compatible boards with 4 analog inputs.
+As kmk is circuitpython based this should work on any [circuitpython compatible boards](https://circuitpython.org/downloads) with 4 analog inputs.
 The WASD keys use linear Hall effect sensors and magnetic keys. 
 The rest of the keys use normal mechanical keys.
 This is just the base code for analog keys. 
