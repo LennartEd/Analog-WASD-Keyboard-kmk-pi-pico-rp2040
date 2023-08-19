@@ -1,9 +1,17 @@
-# Analog-WASD-Keyboard-kmk-pi-pico-rp2040
+#Analog-WASD-Keyboard-kmk-pi-pico-rp2040
 
 A Raspberry pi pico(rp2040) kmk keyboard with analog WASD input. 
-Still work in progress. 
+---
+OVERVIEW
+This is a kmk keyboard using an RP2040 with analog WASD keys.
+The WASD keys use linear Hall effect sensors 
+---
+COMPONENTS
+4 
 
-Added module: analouge.py (threshold can be defined here till i implement it better)
+CODE
+Added module: analouge.py 
+
 
 pin assignment: code.py -> ana.pins =()
 keymap for analog keys can be defined it code.py -> ana.map = []
