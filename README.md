@@ -15,24 +15,22 @@ This is just the base code for analog keys.
 
 COMPONENTS
 ---
-- 1 RP2040 or Circuitpython compatible board (IMPORTANT: you need one with 4 analog inputs which the original pipico does not have. I used [PR2040-Zero](https://circuitpython.org/board/waveshare_rp2040_zero/) and [yd-rp2040](https://circuitpython.org/board/vcc_gnd_yd_rp2040/)
++ 1 RP2040 or Circuitpython compatible board (IMPORTANT: you need one with 4 analog inputs which the original pipico does not have. I used [PR2040-Zero](https://circuitpython.org/board/waveshare_rp2040_zero/) and [yd-rp2040](https://circuitpython.org/board/vcc_gnd_yd_rp2040/)
 
 
-- 4 Linear Hall effect sensors (any should work but i used [HUAXIN HX6659IUA-B](https://www.lcsc.com/product-detail/_HUAXIN-_C495741.html)or [GH39FKSW](https://www.lcsc.com/product-detail/_GoChip-Elec-Tech-Shanghai-_C266230.html))
++ 4 Linear Hall effect sensors (any should work but i used [HUAXIN HX6659IUA-B](https://www.lcsc.com/product-detail/_HUAXIN-_C495741.html)or [GH39FKSW](https://www.lcsc.com/product-detail/_GoChip-Elec-Tech-Shanghai-_C266230.html))
 
 
-- 4 magnetic key switches (I used [wooting lekker](https://wooting.io/product/lekker-switch-linear60])
++ 4 magnetic key switches (I used [wooting lekker](https://wooting.io/product/lekker-switch-linear60])
 
 
-- Normal mechanical keys
++ Normal mechanical keys
 
 
-- Diodes
++ Diodes
 
 
-- (rotary encoders)
-
-
++ (rotary encoders)
 
 CODE
 ---
