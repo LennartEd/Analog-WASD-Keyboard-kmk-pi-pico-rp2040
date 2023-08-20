@@ -1,21 +1,17 @@
-#import supervisor
-#import board
-#import storage
-#import usb_cdc
+"""import supervisor
+import board
+import storage
+import usb_cdc
+import digitalio
 
-#from digitalio import DigitalInOut, Direction, Pull
+button = digitalio.DigitalInOut(board.GP0)
+button.direction = digitalio.Direction.INPUT
+button.pull = digitalio.Pull.UP
 
-#supervisor.set_next_stack_limit(4096 + 4096)
-
-#row = DigitalInOut(board.D7)
-#col = DigitalInOut(board.D6)
-
-#row.direction = Direction.INPUT
-#col.direction = Direction.OUTPUT
-
-#row.pull = Pull.DOWN
-#col.value = True
-
-#if not row.value:
-#    storage.disable_usb_drive()
-#    usb_cdc.disable()
+if button.value:
+    storage.disable_usb_drive() # Hides device storage
+    usb_cdc.disable() # Disables serial comunication
+    usb_midi.disable() # Disables midi
+    usb_hid.enable(boot_device=1) # Enables keyboard before OS boot
+    
+button.deinit()"""
