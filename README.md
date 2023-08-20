@@ -44,6 +44,3 @@ Basic varibles for the analog keys can be changed in the main code.py file so th
 Pin assignment for analog keys can be done in: code.py -> ana.pins =()
 
 The keymap for analog keys can be defined it code.py -> ana.map = []
-
-In the end Boot.py can be uncommented it makes the RP2040 boot straight into keyboard mode. By
-
