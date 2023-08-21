@@ -27,6 +27,9 @@ COMPONENTS
 + 4 magnetic key switches (I used [wooting lekker](https://wooting.io/product/lekker-switch-linear60])
 
 
++ (capacitors 100nF-10000nF) not strictly nececary but reduces noise
+
+
 + Normal mechanical keys
 
 
@@ -35,6 +38,10 @@ COMPONENTS
 
 + (rotary encoders)
 
+BUILDING
+---
+
+
 CODE
 ---
 When [circuitpython is installed](https://learn.adafruit.com/welcome-to-circuitpython/installing-circuitpython) move the content of the code folder into the RP2040.
@@ -42,6 +49,8 @@ When [circuitpython is installed](https://learn.adafruit.com/welcome-to-circuitp
 Added module: analog.py which handles the analog key presses.
 
 Basic variables for the analog keys can be changed in the main code.py file so this file does not have to be touched.
+
+If you're getting ghost presses when using rapid Trigger use the "maxChangeInVal.py"+ 300 to find a siutable value for your keyboard.
 
 Pin assignment for analog keys can be done in: code.py -> ana.pins =()
 
