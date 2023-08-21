@@ -41,15 +41,15 @@ keyboard.debug_enabled = False
 #ANALOG 
 ana.pins = (board.GP29,board.GP28,board.GP27,board.GP26) #define analog pins
 
-ana.reverse = False #flips direction(standard is: analog value goes down when key pressed)
+ana.reverse = False #flips direction(standard is: analog value goes down when key pressed) 
 
 # define per layer if keypresses should be Threshhold(0) or Rapid trigger(1) explanation: https://wooting.io/rapid-trigger 
-ana.keypType = (0, 1) 
+ana.keypType = (1, 0) 
 
-#define 1st threshold for threshold mode 2nd threshold for rapid trigger mode
-#threshold: when analog value is passed key is triggered
+#threshold: when analog value is passed key is pressed 
 #rapit: when a certain distance is surpaced key is pressed (the lower the value the faster responce but at a certain point noise can trigger keypress)
-ana.threshold = (20000,750) 
+    #use the provided "maxChangeInVal.py"+ 300 to find a good rapid trigger value
+ana.threshold = (30000,1800) 
 
 
 
