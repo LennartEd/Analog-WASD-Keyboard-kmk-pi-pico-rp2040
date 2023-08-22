@@ -26,15 +26,15 @@ ana = AnalogKey()
 keyboard.modules = [layers, encoders,ana] #tapdance]
 
 # SWITCH MATRIX 
-keyboard.col_pins = (board.GP3, board.GP4, board.GP5, board.GP6)
-keyboard.row_pins = (board.GP7, board.GP8, board.GP9)
+keyboard.col_pins = (board.GP6, board.GP7, board.GP8, board.GP9)
+keyboard.row_pins = (board.GP10, board.GP11, board.GP12)
 keyboard.diode_orientation = DiodeOrientation.COL2ROW
 
 # ENCODERS
-encoders.pins = ((board.GP2, board.GP1, board.GP0, False), (board.GP10, board.GP11, board.GP12, False),)
+encoders.pins = ((board.GP0, board.GP1, board.GP2, False), (board.GP3, board.GP4, board.GP5, False),)
 
 # EXTENSIONS 
-rgb_ext = RGB(pixel_pin = board.GP13, num_pixels=4, hue_default=100)
+rgb_ext = RGB(pixel_pin = board.GP25, num_pixels=4, hue_default=100)
 keyboard.extensions.append(rgb_ext)
 keyboard.debug_enabled = False
 
