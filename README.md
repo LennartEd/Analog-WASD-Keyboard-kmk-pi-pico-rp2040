@@ -27,7 +27,7 @@ COMPONENTS
 + 4 magnetic key switches (I used [wooting lekker](https://wooting.io/product/lekker-switch-linear60])
 
 
-+ (capacitors 100nF-10000nF) not strictly nececary but reduces noise
++ (capacitors 100nF-10000nF ) not strictly nececary but reduces noise. 10000nF gave me the best results.
 
 
 + Normal mechanical keys
@@ -38,8 +38,9 @@ COMPONENTS
 
 + (rotary encoders)
 
-BUILDING
+BUILDING NOTES
 ---
+As i have only build a prototype and not a full keyboard you'll have to make your own case or use someone elses from the internet.
 
 
 CODE
